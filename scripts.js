@@ -7,3 +7,5 @@ modalClose.addEventListener('click', modal.close)
 modalMask.addEventListener('click', modal.close)
 
 document.getElementById('add-new').addEventListener('click', modal.open)
+
+users.load()
