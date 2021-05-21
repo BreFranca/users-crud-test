@@ -14,30 +14,32 @@
                 <button class="btn"><i class="fas fa-times"></i></button>
             </div>
 
-            <form class="form">
-                <h3>Adicione um novo usuário</h3>
+            <form id="form">
+                <h3 class="title">Adicione um novo usuário</h3>
                 <div class="form-group">
-                    <input id="name" maxlength="100" class="form-control" maxlength="1" required autofocus floating-label='Nome' />
+                    <input name="name" maxlength="100" class="form-control" maxlength="1" required autofocus floating-label='Nome' />
                     <!-- <label for="name">Nome</label>       -->
                 </div>
                 
                 <div class="form-group">
-                    <input id="cpf" maxlength="11" class="form-control" required floating-label='CPF' />
+                    <input name="cpf" maxlength="11" class="form-control" required floating-label='CPF' />
                     <!-- <label for="number">CPF</label> -->
                 </div>
         
                 <div class="form-group">
-                    <input id="phone" maxlength="11" class="form-control" required floating-label='Telefone' />
+                    <input name="phone" maxlength="11" class="form-control" required floating-label='Telefone' />
                     <!-- <label for="number">Telefone</label> -->
                 </div>
                 
                 <div class="form-group">
-                    <input id="email" type="email" maxlength="80" class="form-control" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required  floating-label='E-mail' />
+                    <input name="email" type="email" maxlength="80" class="form-control" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required  floating-label='E-mail' />
                     <!-- <label for="email">E-mail</label> -->
                 </div>
+
+                <input type="hidden" name="index">
                 
                 <div class="form-group">
-                    <button class="btn" type="submit">Cadastrar</button>
+                    <button id="btn-submit" class="btn" type="submit">Cadastrar</button>
                 </div>
             </form>
         </div>
@@ -46,7 +48,7 @@
     <div id="header">
         <div class="gridD">
             <h1>Usuários</h1>
-            <button id="add-new" class="btn btn-circle btn-white">Adicionar novo <i class="fas fa-user-plus"></i></button>
+            <button id="add-new" class="btn btn-circle btn-white"><span>Adicionar novo</span> <i class="fas fa-user-plus"></i></button>
         </div>
     </div>
 
@@ -63,7 +65,7 @@
                     </tr>
                 </thead>
 
-                <tbody>
+                <tbody id="list-view">
                     <tr>
                         <td>name</td>
                         <td>cpf</td>
@@ -89,6 +91,8 @@
     <script src="src/model/UsersList.js"></script>
     <script src="src/helper/FloatingLabel.js"></script>
     <script src="src/helper/StorageHelper.js"></script>
+    <script src="src/helper/Functions.js"></script>
+    <script src="src/view/UsersView.js"></script>
     <script src="src/controller/ModalController.js"></script>
     <script src="src/controller/UserController.js"></script>
     <script src="scripts.js"></script>

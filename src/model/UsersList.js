@@ -18,7 +18,7 @@ class UsersList {
         this.users[index].email = data.email
     }
     
-    get listUsers() {
+    get list() {
         return [].concat(this.users);
     }
 }

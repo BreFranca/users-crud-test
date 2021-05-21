@@ -9,6 +9,33 @@ html, body {
   font-family: sans-serif;
 }
 
+/* Safari */
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.icon-load {
+  border: 2px solid #00c8b3;
+  border-radius: 50%;
+  border-top: 3px solid #ffffff;
+  width: 20px;
+  height: 20px;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+}
+
 body {
   font-size: 16px;
 }
@@ -55,14 +82,14 @@ body .btn.btn-erase {
   background: #FF0000;
   color: #ffffff;
 }
-body .button-group {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
 body #header {
   padding: 20px 0;
   background: #00c8b3;
+}
+@media (max-width: 992px) {
+  body #header {
+    padding: 20px 15px;
+  }
 }
 body #header .gridD {
   display: flex;
@@ -71,6 +98,12 @@ body #header .gridD {
 }
 body #header h1 {
   color: #ffffff;
+}
+body #header .btn span {
+  display: none;
+}
+body #header .btn i {
+  margin-left: 0;
 }
 body .form-group {
   position: relative;
@@ -179,6 +212,11 @@ body #modal-content {
   right: -100%;
   transition: 0.4s all linear;
 }
+@media (max-width: 680px) {
+  body #modal-content {
+    width: calc(300px - 70px);
+  }
+}
 body #modal-content h3 {
   line-height: 1.2em;
   margin-bottom: 35px;
@@ -197,9 +235,20 @@ body #modal.open #modal-content {
 body #table-container {
   padding-top: 100px;
 }
+@media (max-width: 992px) {
+  body #table-container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
 body #table-container table {
   border-collapse: collapse;
   width: 100%;
+}
+@media (max-width: 768px) {
+  body #table-container table thead {
+    display: none;
+  }
 }
 body #table-container table th, body #table-container table td {
   border-bottom: 1px solid #000000;
@@ -210,15 +259,56 @@ body #table-container table th {
   text-align: left;
   font-weight: 700;
 }
+@media (max-width: 768px) {
+  body #table-container table tr {
+    display: block;
+    padding: 10px 0;
+  }
+  body #table-container table tr + tr {
+    border-top: 1px solid rgba(51, 51, 51, 0.3);
+  }
+}
+body #table-container table td span {
+  font-weight: 700;
+}
+@media (max-width: 768px) {
+  body #table-container table td {
+    display: block;
+    border-bottom: none;
+    padding: 3px 0;
+  }
+}
+body #table-container table td .button-group {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media (max-width: 768px) {
+  body #table-container table td .button-group {
+    justify-content: flex-start;
+    margin-top: 5px;
+  }
+}
 body #table-container table td button {
   width: 45px;
   height: 45px;
   padding: 0;
   font-size: 18px;
 }
+@media (max-width: 992px) {
+  body #table-container table td button {
+    width: 35px;
+    height: 35px;
+  }
+}
 body #table-container table td button i {
   margin-left: 0;
   font-size: inherit;
+}
+@media (max-width: 992px) {
+  body #table-container table td button i {
+    font-size: 13px;
+  }
 }
 body #table-container table td button + button {
   margin-left: 10px;

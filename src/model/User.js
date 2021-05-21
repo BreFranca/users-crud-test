@@ -6,19 +6,19 @@ class User {
         this.email = email
     }
 
-    get name() {
+    get getName() {
         return this.name
     }
     
-    get cpf() {
+    get getCpf() {
         return this.cpf
     }
     
-    get phone() {
+    get getPhone() {
         return this.phone
     }
 
-    get email() {
+    get getEmail() {
         return this.email
     }
 
