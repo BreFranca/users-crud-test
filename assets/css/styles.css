@@ -99,11 +99,13 @@ body #header .gridD {
 body #header h1 {
   color: #ffffff;
 }
-body #header .btn span {
-  display: none;
-}
-body #header .btn i {
-  margin-left: 0;
+@media (max-width: 768px) {
+  body #header .btn span {
+    display: none;
+  }
+  body #header .btn i {
+    margin-left: 0;
+  }
 }
 body .form-group {
   position: relative;

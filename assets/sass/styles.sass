@@ -81,10 +81,11 @@ body
         h1
             color: $white
         .btn
-            span
-                display: none
-            i
-                margin-left: 0
+            @media(max-width: 768px)
+                span
+                    display: none
+                i
+                    margin-left: 0
     .form
         &-group
             position: relative
